@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+<div id="shijian"></div>
+<button id="zanti">暂停</button>
+<button id="jx">继续</button>
+</div>
+</body>
+</html>
+<!-- <script type="text/javascript">
+   var SJ=60;
+   var timer.onload=setInterval(function(){
+   	if(SJ==0){
+   		clearInterval(timer);
+   	}else{
+   		shijian.innerHTML=SJ;
+   		--SJ
+   	}
+   },1000)
+
+
+</script> -->
+<script type="text/javascript">
+        window.onload = function(){
+        	var Shijian=document.getElementById("shijian")
+        	var Zanti=document.getElementById("zanti")
+        	var jX=document.getElementById("jx")
+            var i = 60;
+            var timer = setInterval(function(){
+                if(i== -1){
+                    clearInterval(timer);
+                }else{
+                   Shijian.innerHTML="00"+":"+"00"+":"+i--;
+                   
+                }
+            },1000);
+            Zanti.onclick=function(){
+            	clearInterval(timer)
+            }
+            jX.onclick=function(){
+            	var i = 60;
+                var timer = setInterval(function(){
+                  if(i== -1){
+                     clearInterval(timer);
+                  }else{
+                     Shijian.innerHTML="00"+":"+"00"+":"+i--;
+                   
+                  }
+                },1000);
+            }
+        }
+    </script>
